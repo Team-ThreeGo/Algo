@@ -1,0 +1,3 @@
+[submodule "Algo-Backend"]
+	path = Algo-Backend
+	url = https://github.com/Team-ThreeGo/Algo-Backend.git
