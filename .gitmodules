@@ -1,0 +1,24 @@
+[submodule "Algo-Backend"]
+	path = Algo-Backend
+	url = https://github.com/Team-ThreeGo/Algo-Backend.git
+	branch = main
+[submodule "Algo-Member-Service"]
+	path = Algo-Member-Service
+	url = https://github.com/Team-ThreeGo/Algo-Member-Service.git
+	branch = main
+[submodule "Algo-Gateway"]
+	path = Algo-Gateway
+	url = https://github.com/Team-ThreeGo/Algo-Gateway.git
+	branch = main
+[submodule "Algo-Eureka-Server"]
+	path = Algo-Eureka-Server
+	url = https://github.com/Team-ThreeGo/Algo-Eureka-Server.git
+	branch = main
+[submodule "Algo-Coding-Ai"]
+	path = Algo-Coding-Ai
+	url = https://github.com/Team-ThreeGo/Algo-Coding-Ai.git
+	branch = main
+[submodule "Algo-Data"]
+	path = Algo-Data
+	url = https://github.com/Team-ThreeGo/Algo-Data.git
+	branch = main
