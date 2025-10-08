@@ -1,0 +1,30 @@
+name: Update Submodules (Daily 9AM KST)
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 오전 9시 (한국시간 기준)
+  workflow_dispatch:      # 수동 실행도 가능
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Update submodules
+        run: |
+          git submodule foreach 'git checkout main && git pull origin main'
+          git submodule update --remote --merge
+          git add .
+          git commit -m "🔁 Auto-update submodules to latest main branches" || echo "No changes"
+          git push
